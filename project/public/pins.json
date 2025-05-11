@@ -1,0 +1,50 @@
+{
+  "KEY 1 BUILDING": {
+    "yaw": 100,
+    "pitch": -24
+  },
+  "OCEAN": {
+    "yaw": 130,
+    "pitch": 5
+  },
+  "Mohammed Al Ameen Mosque": {
+    "yaw": 150,
+    "pitch": 2
+  },
+  "OMAN MALL": {
+    "yaw": 105,
+    "pitch": -1
+  },
+  "Al Muhana bin Sultan School": {
+    "yaw": 49,
+    "pitch": -51
+  },
+  "Bank Muscat Bousher": {
+    "yaw": 34,
+    "pitch": -15
+  },
+  "Modern College of Business and Science": {
+    "yaw": 327,
+    "pitch": -14
+  },
+  "College Of Banking And Finance Services": {
+    "yaw": 355,
+    "pitch": -8
+  },
+  "ABQ Al Imtiaz Private School": {
+    "yaw": 365,
+    "pitch": -12
+  },
+  "Nasser bin Khalfan Al-Busaidi mosque": {
+    "yaw": 363,
+    "pitch": -3
+  },
+  "Al Salam Hall": {
+    "yaw": 355,
+    "pitch": -2
+  },
+  "Muscat Private Hospital": {
+    "yaw": -25,
+    "pitch": -1
+  }
+}
