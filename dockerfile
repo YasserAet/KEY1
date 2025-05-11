@@ -3,7 +3,7 @@ FROM node:16
 WORKDIR /app
 
 # Install build essentials
-RUN apt-get update && apt-get install -y build-essential python3
+# RUN apt-get update && apt-get install -y build-essential python3
 
 # Copy package files first (for better caching)
 COPY package*.json ./
