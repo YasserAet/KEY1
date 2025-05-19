@@ -8,9 +8,13 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { FLOORS, SPACE_DATA } from "./data"
 
-// Replace all console.log statements with conditional logging
-const DEBUG = false; // Set to false in production
+// Enhanced debugging - set to true when you need to debug mesh names
+const DEBUG = true; // Toggle this to control debug output
+const MESH_DEBUG = true; // Special flag just for mesh name debugging
+
+// Improved debug logging with optional object inspection
 const debugLog = (...args: any[]) => DEBUG && console.log(...args);
+const meshLog = (...args: any[]) => (DEBUG && MESH_DEBUG) && console.log('%c[MESH DEBUG]', 'color: #2ecc71; font-weight: bold', ...args);
 
 interface BuildingModelLoaderProps {
   envModelPath?: string;
@@ -147,13 +151,42 @@ export function BuildingModelLoader({
             (gltf) => {
               const model = gltf.scene.clone()
               model.name = "ENVIRONMENT_MODEL"
+              
+              // Log environment model hierarchy
+              if (MESH_DEBUG) {
+                console.group("🌍 Environment Model Hierarchy");
+                console.log("Path:", envModelPath);
+                
+                // Create a function to log the hierarchy
+                const logHierarchy = (object: THREE.Object3D, depth = 0) => {
+                  const indent = '  '.repeat(depth);
+                  const typeLabel = object instanceof THREE.Mesh ? 
+                    '📦 Mesh' : object instanceof THREE.Group ? 
+                    '📂 Group' : '🔹 Object';
+                  
+                  meshLog(`${indent}${typeLabel}: "${object.name || 'unnamed'}" (${object.type})`);
+                  
+                  if (object instanceof THREE.Mesh) {
+                    const materialType = Array.isArray(object.material) ? 
+                      `MultiMaterial[${object.material.length}]` : 
+                      object.material.type;
+                    
+                    meshLog(`${indent}  - Material: ${materialType}`);
+                    meshLog(`${indent}  - Geometry: Vertices: ${object.geometry.attributes.position.count}`);
+                  }
+                  
+                  object.children.forEach(child => logHierarchy(child, depth + 1));
+                };
+                
+                logHierarchy(model);
+                console.groupEnd();
+              }
 
               // Simply set shadows, no material manipulation
               model.traverse((child) => {
                 if (child instanceof THREE.Mesh) {
                   child.castShadow = true
                   child.receiveShadow = true
-                  // No material cloning
                 }
               })
 
@@ -187,6 +220,23 @@ export function BuildingModelLoader({
                   const model = gltf.scene.clone()
                   model.name = `FLOOR_STRUCTURE_${floor.level}_MODEL`
                   model.visible = false
+                  
+                  // Log structure model hierarchy for this floor
+                  if (MESH_DEBUG) {
+                    console.group(`🏢 Floor ${floor.level} Structure Hierarchy`);
+                    console.log("Path:", floor.floorModelPath);
+                    
+                    let meshCount = 0;
+                    model.traverse((child) => {
+                      if (child instanceof THREE.Mesh) {
+                        meshCount++;
+                        meshLog(`Mesh: "${child.name || 'unnamed'}" (${child.type})`);
+                      }
+                    });
+                    
+                    meshLog(`Total meshes in floor ${floor.level} structure: ${meshCount}`);
+                    console.groupEnd();
+                  }
 
                   model.traverse((child) => {
                     if (child instanceof THREE.Mesh) {
@@ -230,6 +280,68 @@ export function BuildingModelLoader({
                   const model = gltf.scene;
                   model.name = `FLOOR_PLAN_${floor.level}_MODEL`
                   model.visible = false
+                  
+                  // Log detailed floor plan model hierarchy
+                  if (MESH_DEBUG) {
+                    console.group(`📐 Floor ${floor.level} Plan Hierarchy`);
+                    console.log("Path:", floor.planModelPath);
+                    
+                    let hoverableMeshes = 0;
+                    let nonHoverableMeshes = 0;
+                    
+                    console.table(
+                      Array.from(model.children)
+                        .filter(child => child instanceof THREE.Mesh)
+                        .map(mesh => ({
+                          Name: mesh.name || 'unnamed',
+                          Type: mesh.type,
+                          MaterialType: mesh.material ? 
+                            (Array.isArray(mesh.material) ? 
+                              `MultiMaterial[${mesh.material.length}]` : 
+                              mesh.material.type) : 
+                            'None'
+                        }))
+                    );
+                    
+                    // Create a list of all meshes in the plan
+                    const meshNamesList: string[] = [];
+                    
+                    model.traverse((child) => {
+                      if (child instanceof THREE.Mesh) {
+                        const meshName = child.name || 'unnamed';
+                        meshNamesList.push(meshName);
+                        
+                        // Check if this would be hoverable based on existing logic
+                        const isCommonArea = 
+                          meshName.includes('HALL') || 
+                          meshName.includes('LOBBY') || 
+                          meshName.includes('ENTRANCE') || 
+                          meshName.includes('ELECTRICAL') || 
+                          meshName.includes('GUARD') || 
+                          meshName.includes('GARBAGE') || 
+                          meshName.includes('TELECOM') || 
+                          meshName.includes('GROUND1') ||
+                          meshName.includes('STAIR') ||
+                          meshName.includes('CORRIDOR');
+                          
+                        if (isCommonArea) {
+                          nonHoverableMeshes++;
+                        } else {
+                          hoverableMeshes++;
+                        }
+                      }
+                    });
+                    
+                    // Log all mesh names in a collapsible list
+                    console.group('All mesh names in floor plan:');
+                    meshNamesList.sort().forEach(name => {
+                      meshLog(`- ${name}`);
+                    });
+                    console.groupEnd();
+                    
+                    meshLog(`Floor ${floor.level} Plan: Found ${hoverableMeshes} hoverable meshes and ${nonHoverableMeshes} non-hoverable meshes`);
+                    console.groupEnd();
+                  }
 
                   model.traverse((child) => {
                     // Set basic properties
@@ -260,7 +372,9 @@ export function BuildingModelLoader({
                       child.userData.hoverable = !isCommonArea;
                       
                       // Print debug info for each floor object
-                      console.log(`Floor ${floor.level} - Object "${meshName}" - Hoverable: ${child.userData.hoverable}`);
+                      if (MESH_DEBUG) {
+                        meshLog(`Floor ${floor.level} - Object "${meshName}" - Hoverable: ${child.userData.hoverable}`);
+                      }
                       
                       // Add to floor meshes cache
                       if (!floorMeshes[floor.level]) floorMeshes[floor.level] = [];
@@ -519,7 +633,7 @@ export function BuildingModelLoader({
     }
 
     preloadModels()
-
+    
     return () => {
       Object.values(originalMaterials.current).forEach((mat) => mat?.dispose())
       defaultMaterial?.dispose()
@@ -729,10 +843,10 @@ export function BuildingModelLoader({
             // Get property data from SPACE_DATA or provide default
             const flatName = obj.name
             const flatData = SPACE_DATA[flatName as keyof typeof SPACE_DATA] || {}
-            const flatType = flatData.type || 'Apartment'
+            const flatType = flatData.type || 'N/A'
             const flatArea = flatData.area || 'N/A'
             
-            // Set label content
+            // Set label content  
             setLabelContent({ 
               type: flatType, 
               area: flatArea 

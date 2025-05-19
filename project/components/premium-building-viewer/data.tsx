@@ -70,7 +70,7 @@ export const FLOORS = [
       id: "LYMLIGHT-01",
       floor: 1,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "63.30 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -103,13 +103,13 @@ export const FLOORS = [
         "/images/panoramas/LP(5).jpg",
         "/images/panoramas/LP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LYMLIGHT_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_back_101.jpg"
     },
     "flat-01.002": {
       id: "LYMLIGHT-02",
       floor: 2,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "63.30 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -141,13 +141,13 @@ export const FLOORS = [
         "/images/panoramas/LP(4).jpg",
         "/images/panoramas/LP(5).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LYMLIGHT_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_back_201.jpg"
     },
     "flat-01003": {
       id: "LYMLIGHT-03",
       floor: 3,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "63.30 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -179,14 +179,14 @@ export const FLOORS = [
         "/images/panoramas/LP(4).jpg",
         "/images/panoramas/LP(5).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LYMLIGHT_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_back_301.jpg"
     },
     // "flat-01004": {
     "TYPICAL_FLOOR_PLAN_(3RD,_4TH_)027": {
       id: "LYMLIGHT-04",
-      floor: 1,
+      floor: 4,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "63.30 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -218,14 +218,14 @@ export const FLOORS = [
         "/images/panoramas/LP(4).jpg",
         "/images/panoramas/LP(5).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LYMLIGHT_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_back_401.jpg"
     },
     // "flat-01005": {
     "TYPICAL_FLOOR_PLAN_(2nd,_5TH_)027": {
       id: "LYMLIGHT-05",
       floor: 5,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "63.30 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -257,13 +257,13 @@ export const FLOORS = [
         "/images/panoramas/LP(4).jpg",
         "/images/panoramas/LP(5).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LYMLIGHT_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_back_501.jpg"
     },
     "flat-01006": {
       id: "LYMLIGHT-06",
       floor: 6,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "63.30 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -295,9 +295,9 @@ export const FLOORS = [
         "/images/panoramas/LP(4).jpg",
         "/images/panoramas/LP(5).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LYMLIGHT_PLAN.PNG"
+      floorPlanImage: "/images/floor-plans/l_back_601.PNG"
     },
-    "Mesh001": {
+    "Mesh001_1": {
       id: "GROUND FLOOR",
       floor: 0,
       type: "",
@@ -313,11 +313,11 @@ export const FLOORS = [
       laundryArea: "",
       render3D: "/images/3drenders/3dGroundFloor.png",
       roomImages: [
-        "/images/floor-plans/floor_GROUNDFLOOR.PNG",
+        "/images/floor-plans/GROUND.jpg",
       ],
-      floorPlanImage: "/images/floor-plans/floor_GROUNDFLOOR.PNG"
+      floorPlanImage: "/images/floor-plans/GROUND.jpg"
     },
-    "TERRACE_FLOOR_PLAN": {
+    "flat-00.007": {
       id: "TERRACE",
       floor: 7,
       type: "",
@@ -341,7 +341,7 @@ export const FLOORS = [
       id: "LAVANDER-01",
       floor: 1,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "65.52 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -375,13 +375,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LAVANDER_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_back_102.jpg"
     },
     "flat-02002": {
       id: "LAVANDER-02",
       floor: 2,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "65.52 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -415,13 +415,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LAVANDER_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_back_202.jpg"
     },
     "flat-02003": {
       id: "LAVANDER-03",
       floor: 3,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "65.52 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -455,13 +455,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LAVANDER_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_back_302.jpg"
     },
     "flat-02004": {
       id: "LAVANDER-04",
       floor: 4,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "65.52 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -495,13 +495,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LAVANDER_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_back_402.jpg"
     },
     "flat-02005": {
       id: "LAVANDER-05",
       floor: 5,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "65.52 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -535,13 +535,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LAVANDER_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_back_502.jpg"
     },
     "flat-02006": {
       id: "LAVANDER-06",
       floor: 6,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "65.52 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -575,7 +575,7 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/LAVANDER_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_back_602.jpg"
     },
     // "flat-03001": {
     "FirstFloor012": {
@@ -583,7 +583,7 @@ export const FLOORS = [
       id: "TEERACOTTA-01",
       floor: 1,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "69.28 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -615,13 +615,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_back_103.jpg"
     },
     "flat-03002": {
       id: "TEERACOTTA-02",
       floor: 2,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "69.28 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -653,14 +653,14 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_back_203.jpg"
     },
     // "flat-03003": {
    "TYPICAL_FLOOR_PLAN_(3RD,_4TH_)024": {
       id: "TEERACOTTA-03",
       floor: 3,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "69.28 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -692,13 +692,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_back_303.jpg"
     },
     "flat-03004": {
       id: "TEERACOTTA-04",
       floor: 4,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "69.28 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -730,13 +730,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_back_403.jpg"
     },
     "flat-03005": {
       id: "TEERACOTTA-05",
       floor: 5,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "69.28 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -768,14 +768,14 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_back_503.jpg"
     },
     // "flat-03006": {
     "PENTHOUSE__FLOOR_PLAN012": {
       id: "TEERACOTTA-06",
       floor: 6,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "69.28 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -807,13 +807,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_back_603.jpg"
     },
     "flat-04001": {
       id: "TEERACOTTA-07",
       floor: 1,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "72.22 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -845,13 +845,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_front_104.jpg"
     },
     "flat-04002": {
       id: "TEERACOTTA-08",
       floor: 2,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "72.22 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -883,13 +883,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_front_204.jpg"
     },
     "flat-04003": {
       id: "TEERACOTTA-09",
       floor: 3,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "72.22 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -921,13 +921,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_front_304.jpg"
     },
     "flat-04004": {
       id: "TEERACOTTA-10",
       floor: 4,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "72.22 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -959,13 +959,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_front_404.jpg"
     },
     "flat-04005": {
       id: "TEERACOTTA-11",
       floor: 5,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "72.22 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -997,13 +997,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_front_504.jpg"
     },
     "flat-04006": {
       id: "TEERACOTTA-12",
       floor: 6,
       type: "TEERACOTTA",
-      area: "63.754 m²",
+      area: "72.22 m²",
       masterRoomArea: "14.419 m²",
       masterBathroomArea: "4.680 m²",
       lobbyArea: "2.641 m²",
@@ -1035,13 +1035,13 @@ export const FLOORS = [
         "/images/panoramas/TP(5).jpg",
         "/images/panoramas/TP(6).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/ter_front_604.jpg"
     },
     "flat-05001": {
       id: "LAVANDER-07",
       floor: 1,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "70.70 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -1075,13 +1075,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_front_105.jpg"
     },
     "flat-05002": {
       id: "LAVANDER-08",
       floor: 2,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "70.70 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -1115,13 +1115,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_front_205.jpg"
     },
     "flat-05003": {
       id: "LAVANDER-09",
       floor: 3,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "70.70 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -1155,13 +1155,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_front_305.jpg"
     },
     "flat-05004": {
       id: "LAVANDER-10",
       floor: 4,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "70.70 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -1195,13 +1195,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_front_405.jpg"
     },
     "flat-05005": {
       id: "LAVANDER-11",
       floor: 5,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "70.70 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -1235,13 +1235,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_front_505.jpg"
     },
     "flat-05006": {
       id: "LAVANDER-12",
       floor: 6,
       type: "LAVANDER",
-      area: "62.032 m²",
+      area: "70.70 m²",
       masterRoomArea: "13.596 m²",
       masterBathroomArea: "4.231 m²",
       lobbyArea: "3.601 m²",
@@ -1275,13 +1275,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(6).jpg",
         "/images/panoramas/LaP(7).jpg"
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/la_front_605.jpg"
     },
 "flat-06001": {
       id: "LYMLIGHT-07",
       floor: 1,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "65.26 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -1314,13 +1314,13 @@ export const FLOORS = [
         "/images/panoramas/LaP(5).jpg",
         "/images/panoramas/LaP(6).jpg",
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_front_106.jpg"
     },
     "flat-06002": {
       id: "LYMLIGHT-08",
       floor: 2,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "65.26 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -1353,13 +1353,13 @@ export const FLOORS = [
         "/images/panoramas/LP(5).jpg",
         "/images/panoramas/LP(6).jpg",
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_front_206.jpg"
     },
     "flat-06003": {
       id: "LYMLIGHT-09",
       floor: 3,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "65.26 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -1392,13 +1392,13 @@ export const FLOORS = [
         "/images/panoramas/LP(5).jpg",
         "/images/panoramas/LP(6).jpg",
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_front_306.jpg"
     },
     "flat-06004": {
       id: "LYMLIGHT-10",
       floor: 4,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "65.26 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -1431,13 +1431,13 @@ export const FLOORS = [
         "/images/panoramas/LP(5).jpg",
         "/images/panoramas/LP(6).jpg",
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_front_406.jpg"
     },
     "flat-06005": {
       id: "LYMLIGHT-11",
       floor: 5,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "65.26 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -1470,13 +1470,13 @@ export const FLOORS = [
         "/images/panoramas/LP(5).jpg",
         "/images/panoramas/LP(6).jpg",
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_front_506.jpg"
     },
     "flat-06006": {
       id: "LYMLIGHT-12",
       floor: 6,
       type: "LYMLIGHT",
-      area: "59.007 m²",
+      area: "65.26 m²",
       masterRoomArea: "12.304 m²",
       masterBathroomArea: " 4.481 m²",
       lobbyArea: "3.119 m²",
@@ -1509,7 +1509,7 @@ export const FLOORS = [
         "/images/panoramas/LP(5).jpg",
         "/images/panoramas/LP(6).jpg",
       ],
-      floorPlanImage: "/images/floor-plans/TEERACOTTA_PLAN.jpg"
+      floorPlanImage: "/images/floor-plans/l_front_606.jpg"
     },
       "SHOP-01.000": {
         id: "SHOP-01",
