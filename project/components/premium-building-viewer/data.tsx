@@ -297,7 +297,7 @@ export const FLOORS = [
       ],
       floorPlanImage: "/images/floor-plans/l_back_601.PNG"
     },
-    "Mesh001_1": {
+    "Mesh001": {
       id: "GROUND FLOOR",
       floor: 0,
       type: "",
@@ -317,7 +317,8 @@ export const FLOORS = [
       ],
       floorPlanImage: "/images/floor-plans/GROUND.jpg"
     },
-    "flat-00.007": {
+    // "flat-00.007": {
+    "TERRACE_FLOOR_PLAN": {
       id: "TERRACE",
       floor: 7,
       type: "",

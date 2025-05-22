@@ -23,6 +23,8 @@ interface RoomViewerModalProps {
   onClose: () => void;
   onToggleFavorite: (room: Room) => void;
   favoriteRooms: Room[];
+  loadingModelName?: string; // Add this
+  isLoading?: boolean; // Add this
 }
 
 // Sample hotspots data
@@ -47,7 +49,15 @@ const sampleHotspots = [
   }
 ];
 
-export function RoomViewerModal({ room, isOpen, onClose, onToggleFavorite, favoriteRooms }: RoomViewerModalProps) {
+export function RoomViewerModal({ 
+  room, 
+  isOpen, 
+  onClose, 
+  onToggleFavorite, 
+  favoriteRooms,
+  loadingModelName = '',
+  isLoading = false
+}: RoomViewerModalProps) {
   if (!isOpen || !room) return null
 
   const isFavorite = favoriteRooms?.some((favRoom) => favRoom.id === room.id)
@@ -62,6 +72,9 @@ export function RoomViewerModal({ room, isOpen, onClose, onToggleFavorite, favor
   const [floorPlanDimensions, setFloorPlanDimensions] = useState({ width: 0, height: 0 });
   const [containerHeight, setContainerHeight] = useState("auto");
   const floorPlanContainerRef = useRef<HTMLDivElement>(null);
+
+  // Add these state variables
+  const [isModelLoading, setIsModelLoading] = useState(false);
 
   useEffect(() => {
     setCurrentImageIndex(0)
@@ -368,6 +381,16 @@ export function RoomViewerModal({ room, isOpen, onClose, onToggleFavorite, favor
             {activeView === 'images' && <div className="absolute -bottom-1.5 sm:-bottom-2 left-0 w-full h-0.5 bg-[#0b4d43]"></div>}
           </Button>
         </div>
+        
+        {/* Loading indicator - new addition */}
+        {isLoading && loadingModelName && (
+          <div className="mx-2 my-1 p-1.5 bg-[#0b4d43]/5 border border-[#0b4d43]/20 rounded flex items-center">
+            <div className="mr-2 h-3 w-3 rounded-full border-2 border-[#0b4d43] border-t-transparent animate-spin"></div>
+            <span className="text-xs text-[#0b4d43]">
+              Loading {loadingModelName}...
+            </span>
+          </div>
+        )}
         
         {activeView && (
           <div className="border-t px-1.5 sm:px-2 pt-1.5 sm:pt-2 pb-1 sm:pb-1.5">

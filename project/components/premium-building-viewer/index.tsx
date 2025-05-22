@@ -134,6 +134,17 @@ export default function PremiumBuildingViewer() {
 
   return (
     <div className="premium-building-viewer h-screen w-full relative">
+      {/* Floor Indicator - MOVED OUTSIDE CANVAS */}
+      {!isLoading && !showRoomModal && (
+        <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 pointer-events-auto">
+          <FloorIndicator 
+            currentFloor={currentFloor} 
+            totalFloors={totalFloors} 
+            onFloorChange={handleFloorChange} 
+          />
+        </div>
+      )}
+
       {!isLoading && (
         <div className="md:hidden fixed bottom-4 left-4 right-4 z-10">
           <MobileFloorControls
@@ -205,10 +216,8 @@ export default function PremiumBuildingViewer() {
         }}
         performance={{ min: 0.5 }} // Allow throttling for smoother experience
       >
-        <Suspense fallback={null}> {/* Use Suspense for asynchronous loading */}
-          {!isLoading && !showRoomModal && (
-            <FloorIndicator currentFloor={currentFloor} totalFloors={totalFloors} onFloorChange={handleFloorChange} />
-          )}
+        <Suspense fallback={null}>
+          {/* REMOVED FloorIndicator from here */}
           <BuildingModelLoader
             currentFloor={currentFloor}
             onFlatClick={handleFlatClick}

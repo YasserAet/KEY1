@@ -410,7 +410,7 @@ export function BuildingModelLoader({
 
         // Load all floors immediately
         await Promise.all(FLOORS.map(floor => loadFloor(floor.level)));
-        debugLog("All floors loaded immediately!");
+        debugLog("All floors loaded immediately!")
 
         // Move only environment and structure models up on the Y-axis, NOT plans
         const envOffset = new THREE.Vector3(0, 1.2, 0) // Lower environment position
@@ -842,9 +842,21 @@ export function BuildingModelLoader({
             
             // Get property data from SPACE_DATA or provide default
             const flatName = obj.name
-            const flatData = SPACE_DATA[flatName as keyof typeof SPACE_DATA] || {}
-            const flatType = flatData.type || 'N/A'
-            const flatArea = flatData.area || 'N/A'
+            
+            // Add this special case handling for Mesh001 in ground floor
+            type FlatData = { type?: string; area?: string };
+            let flatData: FlatData = {};
+            if (obj.userData.floorLevel === 0 && flatName === "Mesh001") {
+              // Use the correct key from SPACE_DATA for this specific mesh
+              flatData = SPACE_DATA["Mesh001"] || {};
+              console.log("Found ground floor Mesh001, mapping to data:", flatData);
+            } else {
+              // Original lookup logic for other meshes
+              flatData = SPACE_DATA[flatName as keyof typeof SPACE_DATA] || {};
+            }
+            
+            const flatType = flatData.type || 'N/A';
+            const flatArea = flatData.area || 'N/A';
             
             // Set label content  
             setLabelContent({ 
